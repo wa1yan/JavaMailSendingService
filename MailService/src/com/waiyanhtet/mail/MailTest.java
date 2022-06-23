@@ -6,7 +6,7 @@ public class MailTest {
 		MailSendingService mailService = new MailSendingService();
 
 		mailService.prepareForSendingMail();
-		mailService.sendMailPlainMessage("Greetings", "waiyanucsy1@gmail.com");
-		mailService.sendMailEmbedded("Greetings", "waiyanucsy1@gmail.com");
+		mailService.sendMailPlainMessage("Greetings", "receiver@gmail.com");
+		mailService.sendMailEmbedded("Greetings", "receiver@gmail.com");
 	}
 }

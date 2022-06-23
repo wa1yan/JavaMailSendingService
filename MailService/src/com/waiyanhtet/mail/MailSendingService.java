@@ -24,8 +24,8 @@ public class MailSendingService {
 
 	private static Transport myTransport = null;
 	private static Message msg = null;
-	private static String from = "waiyanhtet.cs345@gmail.com";
-	private static String codeWord = "udmckiwgcmowuguv";
+	private static String from = "sender@gmail.com";
+	private static String codeWord = "yourapp password";
 	Session session;
 	Session session2;
 
@@ -127,7 +127,7 @@ public class MailSendingService {
 
 				// Image part
 				bodyPart = new MimeBodyPart();
-				DataSource fds = new FileDataSource("C:\\Users\\waiyanhtet\\Pictures\\download1.png");
+				DataSource fds = new FileDataSource("your\\path\\download1.png");
 				bodyPart.setDataHandler(new DataHandler(fds));
 				bodyPart.setHeader("Content-ID", "<image>");
 				bodyPart.setFileName("benwhite.png");
@@ -135,7 +135,7 @@ public class MailSendingService {
 
 				// PDF part
 				bodyPart = new MimeBodyPart();
-				fds = new FileDataSource("C:\\Users\\waiyanhtet\\Pictures\\benwhite.pdf");
+				fds = new FileDataSource("your\\path\\benwhite.pdf");
 				bodyPart.setDataHandler(new DataHandler(fds));
 				bodyPart.setFileName("benwhite.pdf");
 				mulPart.addBodyPart(bodyPart);
